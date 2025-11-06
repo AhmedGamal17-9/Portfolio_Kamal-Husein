@@ -1,0 +1,504 @@
+/* ===============================
+   Global Styles
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f5f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Theme Colors */
+:root {
+  --main-color: #1e4e79;
+  --accent-color: #d6b98c;
+  --light-bg: #ffffff;
+  --text-dark: #222;
+  --text-light: #666;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #15395c;
+}
+
+.secondary-btn {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* ===============================
+   Navbar
+================================= */
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--light-bg);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo sup {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--main-color);
+}
+
+.nav-actions i {
+  cursor: pointer;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* ===============================
+   Hero Section
+================================= */
+.hero {
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #e0ebf3 40%, #f9f9f9 60%);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  padding-right: 20px;
+}
+
+.hero-text h4 {
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-top: 10px;
+}
+
+.hero-text h3 {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  margin: 10px 0;
+}
+
+.hero-text p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+
+
+.hero-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ===============================
+   Sections Shared
+================================= */
+.section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--main-color);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* ===============================
+   About
+================================= */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.about-content {
+  flex: 1 1 500px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+/* ===============================
+   Portfolio (Projects)
+================================= */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 78, 121, 0.9);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ===============================
+   Skills
+================================= */
+.skills-group {
+  max-width: 900px;
+  margin: auto;
+}
+
+.skills-group h3 {
+  margin: 30px 0 10px;
+  color: var(--main-color);
+}
+
+.skills-group ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.skills-group li {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-group i {
+  color: var(--accent-color);
+}
+
+/* ===============================
+   Experience
+================================= */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flip-card-front {
+  background-color: #fff;
+}
+
+.flip-card-back {
+  background-color: var(--main-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card i {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   Education
+================================= */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.education-block {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.education-block ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: var(--text-light);
+}
+
+/* ===============================
+   Contact
+================================= */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.contact-info a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* ===============================
+   Footer
+================================= */
+footer {
+  text-align: center;
+  background: var(--main-color);
+  color: #fff;
+  padding: 15px 0;
+  margin-top: 60px;
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--light-bg);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.active {
+    display: flex;
+    border-radius: 30px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 80%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
