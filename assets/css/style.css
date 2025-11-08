@@ -404,6 +404,10 @@ h2::after {
   text-decoration: none;
 }
 
+.social-icons {
+  display: none;
+}
+
 .social-icons a {
   color: var(--main-color);
   font-size: 1.4rem;
